@@ -1,19 +1,35 @@
-# Dependency Injection & IoC Project
+# Mini-Framework IoC : Injection de Dépendances
 
-## Student
-Hajar Boulmane
+> Développement d'un moteur d'Inversion de Contrôle (IoC) personnalisé inspiré de Spring.
 
-## Objective
-Implementation of dependency injection using:
-- Static instantiation
-- Dynamic instantiation
-- Spring Framework (XML and Annotations)
-- Mini IoC Framework
+![Java](https://img.shields.io/badge/Java-17-orange?logo=java) ![Framework](https://img.shields.io/badge/Framework-Custom--IoC-blue) ![JAXB](https://img.shields.io/badge/XML-JAXB-green)
+
+## Valeur Pédagogique
+Ce projet permet de comprendre les mécanismes internes des frameworks modernes en implémentant :
+* **Couplage Faible** : Séparation des interfaces et des implémentations.
+* **Méta-programmation** : Utilisation intensive de la **Reflection API** pour l'instanciation dynamique.
+* **OXM** : Mapping Objet-XML pour la configuration.
 
 ---
 
-## Work Progress Log
+##  Fonctionnalités Clés
 
-### Session 1
-- Project initialization
-- Git repository creation
+### 1. Configuration par Annotations
+Le framework scanne les packages et détecte les composants automatiquement.
+* `@Component` : Marque une classe pour être gérée par le framework.
+* `@Autowired` : Injecte automatiquement la dépendance (Field Injection).
+
+### 2. Configuration XML
+Utilisation d'un fichier `applicationContext.xml` pour définir les beans et leurs liens.
+* Support de l'injection par **Setter**.
+* Support de l'injection par **Constructeur**.
+
+---
+
+##  Structure du Projet
+
+```text
+src/main/java/framework
+├── annotations/    # @Component, @Autowired
+├── context/        # AnnotationApplicationContext, XmlApplicationContext
+└── xml/            # BeanModel, PropertyModel (JAXB)
