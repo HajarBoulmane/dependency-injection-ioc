@@ -29,7 +29,11 @@ Utilisation d'un fichier `applicationContext.xml` pour définir les beans et leu
 ##  Structure du Projet
 
 ```text
-src/main/java/framework
-├── annotations/    # @Component, @Autowired
-├── context/        # AnnotationApplicationContext, XmlApplicationContext
-└── xml/            # BeanModel, PropertyModel (JAXB)
+src/main/java
+├── framework/           # Cœur du Framework
+│   ├── annotations/     # @Component, @Autowired
+│   ├── context/         # AnnotationApplicationContext, XmlApplicationContext
+│   └── xml/             # BeanModel, BeansList (JAXB Models)
+├── dao/                 # Data Access Layer (Interfaces & Impl)
+├── metier/              # Business Layer (Interfaces & Impl)
+└── presentation/        # Tests et démonstrations
