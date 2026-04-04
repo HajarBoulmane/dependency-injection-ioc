@@ -1,0 +1,2 @@
+net.hajar.ioc_projects.dao.DaoImpl2
+net.hajar.ioc_projects.metier.MetierImpl
